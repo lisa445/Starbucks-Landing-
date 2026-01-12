@@ -1,0 +1,48 @@
+body{
+    background: var(--main-color);
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+/*header*/
+.header{
+    padding: 50px 0;
+}
+.nav_link{
+    color: var(--gray);
+    font-family: var(--MontserratR);
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 90px;
+}
+.nav_link:last-child{
+    margin-right: 0;
+}
+
+/*Alternative variant
+    .nav_link + .nav_link{
+    margin-left: 90px;
+}
+*/
+
+.header .container{
+    display: flex;
+    align-items: center;
+    gap:90px;
+}
+/*Logo*/
+.starbucks_logo{
+    font-family: var(--MontserratEB);
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 109%;
+    background: linear-gradient(223deg, #237249 0%, #35c66b 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

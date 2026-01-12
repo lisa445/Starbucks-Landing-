@@ -1,0 +1,18 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #121517;
+    --bright-green: #35C66B;
+    --dark-green: #237249;
+    --gray: #D9D9D9;
+    --footer-gray:#BBB3B3;
+
+    /*FONTS*/
+    --MontserratEB: 'MontserratEB', sans-serif;
+    --MontserratR: 'MontserratR', sans-serif;
+    --MontserratM: 'MontserratM', sans-serif;
+    --MontserratESB: 'MontserratSB', sans-serif;
+}
