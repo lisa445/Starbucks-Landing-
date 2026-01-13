@@ -1,48 +1,172 @@
 body{
     background: var(--main-color);
+    color: var(--gray);
+    font-size: 20px;
+}
+html{
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;
+    color: var(--gray);
+}
+img{
+    max-width: 100%;
 }
 .container{
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 15px;
 }
+.section_title,.starbucks_logo{
+    font-family: var(--MontserratEB);
+    font-weight: 800;
+    line-height: 109%;
+}
+.nav_link,.section_text, a[class$="-btn"], .stats_item{
+    font-family: var(--MontserratR);
+    line-height: 163%;
+    font-weight: 400;
+}
+.starbucks_logo, .section_title span, .stats_num::after{
+    background: linear-gradient(223deg, #237249 0%, #35c66b 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+
+/*Logo*/
+.starbucks_logo{
+    font-size: 38px;
+}
 /*header*/
 .header{
     padding: 50px 0;
 }
-.nav_link{
-    color: var(--gray);
-    font-family: var(--MontserratR);
-    font-size: 20px;
-    font-weight: 400;
-    margin-right: 90px;
-}
-.nav_link:last-child{
-    margin-right: 0;
-}
 
-/*Alternative variant
-    .nav_link + .nav_link{
+.nav_link + .nav_link{
     margin-left: 90px;
 }
-*/
 
 .header .container{
     display: flex;
     align-items: center;
     gap:90px;
 }
-/*Logo*/
-.starbucks_logo{
-    font-family: var(--MontserratEB);
-    font-weight: 800;
-    font-size: 38px;
+
+/*Text styles*/
+.section_title{
+    color: white;
+    font-size: 80px;
+}
+.welcome_title,.welcome_text {
+    margin-bottom: 54px;
+}
+.section_text{
+    line-height: 1.63;
+    letter-spacing: -0.02em;
+    color: var(--gray)
+}
+
+/*welcome section*/
+.welcome_desc{
+    max-width: 590px;
+}
+.welcome_section .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.welcome_title{
+    position: relative;
+}
+.welcome_title::before{
+    content:'';
+    display: block;
+    left:40px;
+    top:80px;
+    height: 324px;
+    width: 324px;
+    border-radius: 100%;
+    background: linear-gradient(245deg, rgba(35, 114, 73, 0.55) 0%, rgba(53, 198, 107, 0.73) 51.85%);
+    filter: blur(100px);
+    position: absolute;
+    z-index: -5;
+}
+.welcome_img img{
+    width: 468px;
+}
+.welcome_img{
+    position: relative;
+}
+.welcome_img::before{
+    content:'';
+    width: 860px;
+    height: 620px;
+    position: absolute;
+    z-index: -4;
+    right: -230px;
+    bottom: -240px;
+    background-image: url('../media/main/welcome_section/line.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.welcome_img::after{
+    content:'';
+    display: block;
+    height: 324px;
+    width: 324px;
+    border-radius: 100%;
+    background: linear-gradient(245deg, rgba(35, 114, 73, 0.55) 0%, rgba(53, 198, 107, 0.73) 51.85%);
+    filter: blur(100px);
+    position: absolute;
+    z-index: -5;
+    right: 60px;
+    bottom: 20px;
+    
+}
+/*Ссылки-кнопки*/
+a[class$="-btn"]{
+    font-size: 24px;
+    line-height: 146%;
+ }
+.primary-btn{
+    color:white;
+    font-weight: 639;
+    border-radius: 83px;
+    padding: 20px 80px;
+    background: linear-gradient(210deg, #237249 0%, #35c66b 100%);
+}
+
+.secondary-btn{
+    background: transparent;
+    margin-left: 20px;
+    border-radius: 83px;
+    border: 1px solid var(--gray);
+    padding: 20px 54px;
+}
+
+.btn_wrapper{
+    display: flex;
+    align-items: center;
+    margin-bottom: 54px;
+}
+.statistics{
+    display: flex;
+    align-items: center;
+    gap: 46px;
+}
+.stats_item{
+    line-height: 144%;
+    width: 126px;
+}
+.stats_num, .stats_num::after{
+    font-size: 62px;
     line-height: 109%;
-    background: linear-gradient(223deg, #237249 0%, #35c66b 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white;
+}
+.stats_num::after{
+    content: '+';
 }
